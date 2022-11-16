@@ -64,7 +64,6 @@ function showPosition(position) {
 
     const popup2 = new mapboxgl.Popup({offset: 25}).setText(
         'Stade Vélodrome - 10 min'
-
     );
 
     const olympics = {
@@ -79,7 +78,7 @@ function showPosition(position) {
                 properties: {
                     title: 'Mapbox',
                     description: 'Roucas Blanc',
-                    popup:popup1
+                    popup: popup1
                 }
             },
             {
@@ -97,6 +96,7 @@ function showPosition(position) {
         ]
     };
 
+
     for (const feature of olympics.features) {
         const el = document.createElement('div');
         el.className = 'marker';
@@ -108,9 +108,21 @@ function showPosition(position) {
     }
 
 
-     const marker1 = new mapboxgl.Marker({ "color": "#000000" })
-         .setLngLat([5.381944, 43.261061])
-         .addTo(map);
+    const marker1 = new mapboxgl.Marker({"color": "#000000"})
+        .setLngLat([5.381944, 43.261061])
+        .addTo(map);
+
+    const marker2 = new mapboxgl.Marker({"color": "#fcbf31"})
+        .setLngLat([5.383924, 43.281031])
+        .addTo(map);
+
+    const marker3 = new mapboxgl.Marker({"color": "#0282c8"})
+        .setLngLat([5.382933, 43.261335])
+        .addTo(map);
+
+    const marker4 = new mapboxgl.Marker({"color": "#ED354F"})
+        .setLngLat([5.385942, 43.261023])
+        .addTo(map);
 
 
 }
